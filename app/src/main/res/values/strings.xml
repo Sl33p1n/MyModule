@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyModule</string>
+    <string name="restaurantName">Restaurant Name</string>
+    <string name="restaurantAddress">Address</string>
+    <string name="RestaurantLikes">Total Likes</string>
+    <string name="AddButton">ADD</string>
+    <string name="restaurantRating">Rating</string>
+    <string name="Upload">Upload</string>
+    <string name="websiteLink">Restaurant Website</string>
+    <string name="Address">Address:</string>
+    <string name="Name">Name:</string>
+    <string name="Edit_Info">Edit Info</string>
+    <string name="Delete">Delete</string>
+</resources>
