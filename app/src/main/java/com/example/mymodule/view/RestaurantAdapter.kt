@@ -36,65 +36,6 @@ class RestaurantAdapter(val c: Context, val restaurantList: ArrayList<Restaurant
             menu.setOnClickListener { editMenu(it) }
         }
 
-        /*private fun editMenu(v:View) {
-            val position = restaurantList[adapterPosition]
-            val editMenu = PopupMenu(c, v)
-            editMenu.inflate(R.menu.edit_menu)
-            editMenu.setOnMenuItemClickListener {
-                when(it.itemId){
-                    R.id.editInfo->{
-                        val v = LayoutInflater.from(c).inflate(R.layout.add_restaurant, null)
-                        val name = v.findViewById<EditText>(R.id.editRestaurantName)
-                        val address = v.findViewById<EditText>(R.id.editAddress)
-                        val rating = v.findViewById<EditText>(R.id.editRating)
-                        val website = v.findViewById<EditText>(R.id.editLink)
-                        val like = v.findViewById<EditText>(R.id.editLike)
-
-                        AlertDialog.Builder(c).setView(v).setPositiveButton("Update"){
-                            dialog, _->
-                            position.restaurantName = name.text.toString()
-                            position.restaurantAddress = address.text.toString()
-                            position.restaurantRating = rating.text.toString()
-                            position.restaurantLink = website.text.toString()
-                            position.restaurantLikes = like.text.toString()
-                            notifyDataSetChanged()
-                            Toast.makeText(c,"Info Updated",Toast.LENGTH_SHORT).show()
-                            dialog.dismiss()
-                        }
-                            .setNegativeButton("Cancel"){
-                                dialog, _->
-                                dialog.dismiss()
-                            }
-                            .create()
-                            .show()
-                        true
-                    }
-                    R.id.delete-> {
-                        AlertDialog.Builder(c).setTitle("Delete").setMessage("Are you sure to delete this info?").setPositiveButton("Yes"){
-                            dialog, _->
-                            restaurantList.removeAt(adapterPosition)
-                            notifyDataSetChanged()
-                            Toast.makeText(c, "Deleted Successfully", Toast.LENGTH_SHORT).show()
-                            dialog.dismiss()
-                        }
-                            .setNegativeButton("No"){
-                                dialog, _->
-                                dialog.dismiss()
-                            }
-                            .create()
-                            .show()
-                        true
-                    }
-                    else -> true
-                }
-            }
-            editMenu.show()
-            val popup = PopupMenu::class.java.getDeclaredField("Edit")
-            popup.isAccessible = true
-            val menu = popup.get(editMenu)
-            menu.javaClass.getDeclaredMethod("setForceShowIcon", Boolean::class.java).invoke(menu, true)
-        }*/
-
         private fun editMenu(view: View) {
             val position = restaurantList[adapterPosition]
             val v = LayoutInflater.from(c).inflate(R.layout.add_restaurant, null)
